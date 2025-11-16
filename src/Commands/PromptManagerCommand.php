@@ -41,7 +41,6 @@ class PromptManagerCommand extends Command
             return self::FAILURE;
         }
 
-
         $this->info('Prompt created successfully: '.$filePath);
 
         return self::SUCCESS;

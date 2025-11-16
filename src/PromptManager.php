@@ -14,7 +14,7 @@ class PromptManager
 
         $storagePath = config('prompt-manager.path');
 
-        if (!str_starts_with($file, $storagePath)) {
+        if (! str_starts_with($file, $storagePath)) {
             $file = config('prompt-manager.path').DIRECTORY_SEPARATOR.$file;
         }
 
@@ -27,7 +27,7 @@ class PromptManager
     {
         foreach ($placeholders as $key => $value) {
             // Only replace {{ key }} patterns, avoiding blade syntax like {{-- comments --}}
-            $pattern = '/\{\{\s*' . preg_quote($key, '/') . '\s*}}(?!\s*--)/';
+            $pattern = '/\{\{\s*'.preg_quote($key, '/').'\s*}}(?!\s*--)/';
             $content = preg_replace($pattern, (string) $value, $content);
         }
 

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Chatvia\PromptManager\PromptManager
+ *
  * @method load(string $filePath, array $placeholders = []): string
  */
 class PromptManager extends Facade
